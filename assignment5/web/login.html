@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="LoginServlet" method="post">
+        <label>Username:</label><input type="text" name="username" required><br>
+        <label>Password:</label><input type="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if(params.get('error') === '1'){
+            document.write('<p style="color:red;">Invalid credentials. Please try again.</p>');
+        }
+    </script>
+</body>
+</html>
